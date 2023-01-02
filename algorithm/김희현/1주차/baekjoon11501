@@ -7,9 +7,9 @@ for i in range(t):
     buy_l = []
     max = 0
     r = 0
-    for j in range(len(d),-1,-1):
-        if max <= j :
-            max = j
+    for j in range(len(d)-1,-1,-1):
+        if max <= d[j] :
+            max = d[j]
         else:
-            r += max-j
+            r += max-d[j]
     print(r)
