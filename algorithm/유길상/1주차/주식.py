@@ -29,16 +29,16 @@
 
 
 # solution2
-# test_case = int(input())
-# for test in range(test_case) :
-#     days = int(input())
-#     price = list(map(int,input().split()))
-#     big_profit = 0
-#     result = 0
-#     for num in range(len(price)-1, -1, -1) :
-#         if price[num] > big_profit :
-#             big_profit = price[num]
-#         else :
-#             result += big_profit - price[num]
+test_case = int(input())
+for test in range(test_case) :
+    days = int(input())
+    price = list(map(int,input().split()))
+    big_profit = 0
+    result = 0
+    for num in range(len(price)-1, -1, -1) :
+        if price[num] > big_profit :
+            big_profit = price[num]
+        else :
+            result += big_profit - price[num]
     
-#     print(result)
+    print(result)
