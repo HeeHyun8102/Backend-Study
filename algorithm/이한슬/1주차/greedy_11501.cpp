@@ -17,6 +17,8 @@ int main() {
     for(int j = 0; j < n; j++) {
       cin >> price[j];
     }
+
+    
     int curMax = price[n-1];
     for(int j = n-1; j >= 0; j--) {
       if(price[j] > curMax) {
