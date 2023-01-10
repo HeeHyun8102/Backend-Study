@@ -1,0 +1,55 @@
+# 자료 구조와 알고리즘
+## (Data Structure and Algorithm)
+
+### 자료 구조란?
+자료구조는 자료를 담는 구조이다.
+자료(Data)는 저장공간(Memory)이 필요하다.
+읽기, 쓰기, 삽입, 삭제, 탐색 등 저장된 자료의 연산을 상황에 맞게 효과적으로 제공하는 것이 자료구조이다.
+#### 자료구조의 예
+ - 변수(Variable)
+```
+a = 5    # 쓰기연산
+print(a) # 읽기연산
+```
+### 알고리즘이란?
+위에서 말한 자료구조에 입력 된 데이터를 이용해 문제를 푸는 논리적인 절차가 알고리즘이다.
+즉, 자료구조에 담긴 데이터를 연산, 가공해서 원하는 답을 출력하는 것이다.
+
+#### 인류 최초의 알고리즘
+**알고리즘 명칭의 유래**
+9세기 페르시아에 Al-Khwarizmi라는 대수학자가 있었다.
+이 수학자가 대수와 0에 관해 쓴 책이 라틴어로 번역되어 수학자의 이름이 
+Algorismus + Arithmos(수) = Algorithm으로 번역되어 지금의 Algorithm 명칭되게 되었다는 썰
+
+**최대공약수(GCD) 계산 알고리즘 By Euclid**
+gcd(8, 12) = max({1, 2, 4}) = 4
+gcd(8, 12) = gcd(8, 4)
+![](https://velog.velcdn.com/images/ygs0574/post/ccb0bddd-146f-4dd8-8993-a74f30fe6d15/image.jpg)
+
+```
+#gcd(a, b)를 구하여라
+
+# 빼기
+def gcd_sub(a, b) :
+	while a != 0 and b != 0 :
+    	if a > b :
+        	a = a / b
+        else :
+        	b = b / a
+	return a+b
+
+#나머지
+def gcd_mod(a, b) :
+	while a != 0 and b != 0 :
+    	if a > b :
+        	a = a % b
+        else :
+        	b = b % a
+	return a+b
+
+#재귀 gcd_rec -> gcd(a, b%a) or gcd(a%b, b)
+
+```
+
+- 시간 복잡도
+- 순차적 자료구조

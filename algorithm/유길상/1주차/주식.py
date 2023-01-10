@@ -9,20 +9,36 @@
 # 예를 들어 날 수가 3일이고 날 별로 주가가 10, 7, 6일 때, 주가가 계속 감소하므로 최대 이익은 0이 된다. 
 # 그러나 만약 날 별로 주가가 3, 5, 9일 때는 처음 두 날에 주식을 하나씩 사고, 마지막날 다 팔아 버리면 이익이 10이 된다.
 
-test_case = int(input())
-i = 0
-buy_price = []
-big_price = 0
+# solution1 - timeout
+# profit = 0
+# big_profit = 0
 
-result = 0
-for it in range(1,test_case + 1)  :
+# test_case = int(input())
+# for test in range(test_case) :
+#     days = int(input())
+#     price = list(map(int,input().split()))
+#     length = len(price)
+#     temp = [0 for i in range(0,length)]
+#     for j in range(0,length) :
+#         for k in range(j+1, length) :
+#             profit = ((price[j] * -1) + price[k])
+#             if profit > temp[j] :
+#                 temp[j] = profit
+#     big_profit = sum(temp)
+#     print(big_profit)  
+
+
+# solution2
+test_case = int(input())
+for test in range(test_case) :
     days = int(input())
     price = list(map(int,input().split()))
-    if len(price) == days :
-        big_price = sorted(price)
-        while True :
-            if price[i] == big_price :
-                break
-            elif price[i] < big_price :
-                buy_price.appned(big_price - price[i])
-            
+    big_profit = 0
+    result = 0
+    for num in range(len(price)-1, -1, -1) :
+        if price[num] > big_profit :
+            big_profit = price[num]
+        else :
+            result += big_profit - price[num]
+    
+    print(result)
