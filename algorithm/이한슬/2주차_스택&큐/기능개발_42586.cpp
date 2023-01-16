@@ -59,3 +59,6 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
 
     return answer;
 }
+
+//////////////////////////// 다른 방법 ///////////////////////////////
+// 배포까지 남은 날짜만 큐에 넣어도 됨
