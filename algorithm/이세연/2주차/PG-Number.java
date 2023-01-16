@@ -3,6 +3,7 @@ import java.util.*;
 public class Solution {
     public int[] solution(int []arr) {
        int[] answer = {};  
+       
        ArrayList<Integer> list = new ArrayList<Integer>();
         
        int tempNum=10; 
