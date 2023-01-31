@@ -41,7 +41,6 @@ def solution(jobs):
             now += current[0] # 현재시간에 최근 작업시간을 더한다.
             answer += (now - current[1]) # 현재 시간에서 작업 시작 시간을 뺀 후 더해준다
             i += 1
-            print(i)
         else:
             now += 1
     return int(answer / len(jobs))
@@ -50,3 +49,5 @@ def solution(jobs):
 par = [[0,3],[1,9],[2,6]]
 
 print(solution(par))
+
+3333256541931
