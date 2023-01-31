@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BackJoon {
+public class Exchange {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); //거스름돈 (1<= n <= 100000)
