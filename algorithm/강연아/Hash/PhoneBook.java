@@ -1,7 +1,9 @@
+package Hash;
+
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+class PhoneBook {
     public boolean solution(String[] phoneBook) {
         Map<String, Integer> map = new HashMap<>();
 
